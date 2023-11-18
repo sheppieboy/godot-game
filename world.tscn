@@ -1,3 +1,31 @@
-[gd_scene format=3 uid="uid://cjc1vpdrk0sl8"]
+[gd_scene load_steps=5 format=3 uid="uid://cjc1vpdrk0sl8"]
+
+[ext_resource type="PackedScene" uid="uid://dslm5lvffdcy4" path="res://player.tscn" id="1_eo3cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4i2qa"]
+size = Vector2(234.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyg5j"]
+size = Vector2(19, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur03f"]
+size = Vector2(19, 108)
 
 [node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_eo3cr")]
+position = Vector2(218, 71)
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="Floor" type="CollisionShape2D" parent="Background"]
+position = Vector2(310.75, 196)
+shape = SubResource("RectangleShape2D_4i2qa")
+
+[node name="LeftHandWall" type="CollisionShape2D" parent="Background"]
+position = Vector2(180.5, 134)
+shape = SubResource("RectangleShape2D_lyg5j")
+
+[node name="RightHandWall" type="CollisionShape2D" parent="Background"]
+position = Vector2(438, 135)
+shape = SubResource("RectangleShape2D_ur03f")
