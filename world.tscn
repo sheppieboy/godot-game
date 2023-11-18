@@ -14,18 +14,18 @@ size = Vector2(19, 108)
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_eo3cr")]
-position = Vector2(218, 71)
+position = Vector2(401, 71)
 
 [node name="Background" type="StaticBody2D" parent="."]
 
 [node name="Floor" type="CollisionShape2D" parent="Background"]
-position = Vector2(310.75, 196)
+position = Vector2(480, 529)
 shape = SubResource("RectangleShape2D_4i2qa")
 
 [node name="LeftHandWall" type="CollisionShape2D" parent="Background"]
-position = Vector2(180.5, 134)
+position = Vector2(342, 455)
 shape = SubResource("RectangleShape2D_lyg5j")
 
 [node name="RightHandWall" type="CollisionShape2D" parent="Background"]
-position = Vector2(438, 135)
+position = Vector2(618, 441)
 shape = SubResource("RectangleShape2D_ur03f")
